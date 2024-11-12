@@ -151,6 +151,38 @@ SELECT * FROM users WHERE email = 'novo_admin@example.com';
 
 --------------------
 
+
+<h3> rotas para teste📌</h3>
+
+Rotas Públicas
+
+Rotas de Autenticação (somente para visitantes - middleware guest)
+
+GET /login - Exibe o formulário de login. (Usa o AuthenticatedSessionController@create)
+POST /login - Processa o login do usuário. (Usa o AuthenticatedSessionController@store)
+
+Rotas Autenticadas (middleware auth)
+GET /dashboard - Exibe o painel (dashboard) principal para usuários autenticados. (Usa uma função anônima, middleware(['auth', 'verified']))
+GET /profile - Exibe o formulário para edição do perfil do usuário. (Usa o ProfileController@edit)
+PATCH /profile - Atualiza os dados do perfil do usuário. (Usa o ProfileController@update)
+DELETE /profile - Exclui a conta do usuário. (Usa o ProfileController@destroy)
+POST /logout - Realiza o logout do usuário. (Usa o AuthenticatedSessionController@destroy)
+
+Rotas de Administração (middleware auth e is_admin)
+GET /banners - Exibe uma lista de banners. (Usa o BannerController@index)
+GET /banners/create - Exibe o formulário para criar um novo banner. (Usa o BannerController@create)
+POST /banners - Armazena um novo banner. (Usa o BannerController@store)
+GET /banners/{banner} - Exibe os detalhes de um banner específico. (Usa o BannerController@show)
+GET /banners/{banner}/edit - Exibe o formulário para edição de um banner. (Usa o BannerController@edit)
+PUT/PATCH /banners/{banner} - Atualiza um banner existente. (Usa o BannerController@update)
+DELETE /banners/{banner} - Exclui um banner. (Usa o BannerController@destroy)
+Essas rotas formam a estrutura principal para navegação, autenticação e administração no projeto, permitindo fácil gestão e interação com os recursos, especialmente os banners.
+
+
+
+--------------------------
+
+
 <h3> Imagens funcionamento📌</h3>
 <img src="imagens/1.png" width="400px;" alt="1"/>
 <img src="imagens/2.png" width="400px;" alt="2"/>
