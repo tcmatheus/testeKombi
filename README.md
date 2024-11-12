@@ -106,11 +106,46 @@ php artisan serve
    ```
 
 <h3> Usuários📌</h3>
-Caso não queira criar um usário use este:
+Para inserir um novo usuário administrador diretamente no banco de dados, siga estas instruções:
 
+Crie um Novo Usuário Administrador via SQL:
+
+Conecte-se ao banco de dados MySQL com o mesmo comando que você usou para verificar as tabelas:
  ```bash
-login: admin@exemplo.com
-senha: 123456
+use o comando para conectar ao banco
+mysql -u seu_usuario -p
+
+--------------------------
+sql
+Copiar código
+USE landing_page_db;
+Insira o Novo Usuário:
+
+Execute o comando abaixo para criar um novo usuário com permissões de administrador. Substitua novo_admin@example.com pelo email desejado, e 123456 pela senha desejada.
+
+Lembre-se de que a senha precisa ser criptografada com Bcrypt para ser aceita pelo sistema. O exemplo a seguir utiliza o hash da senha 123456.
+
+sql
+Copiar código
+INSERT INTO users (name, email, email_verified_at, password, created_at, updated_at, is_admin) 
+VALUES (
+    'Novo Admin', 
+    'novo_admin@example.com', 
+    NOW(), 
+    '$2y$12$3Rgy9sseQBhfsWmjLRSmu.HlUd3ag4FbMWbm5ZcFf0lv.WANW9/pm', 
+    NOW(), 
+    NOW(), 
+    1
+);
+Aqui, NOW() define a data de criação e atualização automaticamente, e o valor 1 em is_admin torna o usuário um administrador.
+
+Confirme a Inserção:
+
+Você pode verificar se o usuário foi inserido corretamente com o comando:
+
+sql
+Copiar código
+SELECT * FROM users WHERE email = 'novo_admin@example.com';
    ```
 
 
