@@ -119,14 +119,14 @@ senha: 123456
 --------------------
 
 <h3> Imagens funcionamento📌</h3>
-<img src="/LandingPageProject/public/imagens/1.png" width="400px;" alt="1"/>
-<img src="/LandingPageProject/public/imagens/2.png" width="400px;" alt="2"/>
-<img src="/LandingPageProject/public/imagens/3.png" width="400px;" alt="3"/>
-<img src="/LandingPageProject/public/imagens/4.png" width="400px;" alt="4"/>
-<img src="/LandingPageProject/public/imagens/5.png" width="400px;" alt="5"/>
-<img src="/LandingPageProject/public/imagens/6.png" width="400px;" alt="6"/>
-<img src="/LandingPageProject/public/imagens/7.png" width="400px;" alt="7"/>
-<img src="/LandingPageProject/public/imagens/8.png" width="400px;" alt="1"/>
+<img src="imagens/1.png" width="400px;" alt="1"/>
+<img src="imagens/2.png" width="400px;" alt="2"/>
+<img src="imagens/3.png" width="400px;" alt="3"/>
+<img src="imagens/4.png" width="400px;" alt="4"/>
+<img src="imagens/5.png" width="400px;" alt="5"/>
+<img src="imagens/6.png" width="400px;" alt="6"/>
+<img src="imagens/7.png" width="400px;" alt="7"/>
+<img src="imagens/8.png" width="400px;" alt="8"/>
 
 
 
