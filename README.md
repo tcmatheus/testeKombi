@@ -100,8 +100,6 @@ php artisan migrate
 5- Após isto rode o comando para abrir o server
    ```bash
 
-após isto rode o comando para abrir o server
-
 php artisan serve
 
 
