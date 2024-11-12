@@ -1,66 +1,138 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<center> <h1>💻 Bem vindo 💻</h1> </center>
 
-## About Laravel
+## Como instalar o projeto
+1- Clone o repositorio em sua maquina
+ ```bash
+   git clone "URL DO PROJETO"
+   ```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2- Instale as  dependencias do projeto com os seguintes comandos:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+   ```bash
+    composer install
+    npm install
+   ```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3- Configure o .env
+siga este modelo de .env
 
-## Learning Laravel
+```bash
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:wCeA8G2K5U+NEgYo4ZUB1gGCKC1x0TG8yZDB5yxo9Lc=
+APP_DEBUG=true
+APP_TIMEZONE=UTC
+APP_URL=http://localhost
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+APP_LOCALE=en
+APP_FALLBACK_LOCALE=en
+APP_FAKER_LOCALE=en_US
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+APP_MAINTENANCE_DRIVER=file
+# APP_MAINTENANCE_STORE=database
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+PHP_CLI_SERVER_WORKERS=4
 
-## Laravel Sponsors
+BCRYPT_ROUNDS=12
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+LOG_CHANNEL=stack
+LOG_STACK=single
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
 
-### Premium Partners
+DB_CONNECTION=sqlite
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+SESSION_DRIVER=database
+SESSION_LIFETIME=120
+SESSION_ENCRYPT=false
+SESSION_PATH=/
+SESSION_DOMAIN=null
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+BROADCAST_CONNECTION=log
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=database
 
-## Code of Conduct
+CACHE_STORE=database
+CACHE_PREFIX=
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+MEMCACHED_HOST=127.0.0.1
 
-## Security Vulnerabilities
+REDIS_CLIENT=phpredis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+MAIL_MAILER=log
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
 
-## License
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+VITE_APP_NAME="${APP_NAME}"
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=landing_page_db
+DB_USERNAME=seu_users     # Nome do usuário criado ou já existente no MySQL
+DB_PASSWORD=sua_senha   # Senha configurada para o usuário MySQL
+```
+
+4- Rode as migrations
+
+   ```bash
+php artisan migrate
+
+```
+
+5- Após isto rode o comando para abrir o server
+   ```bash
+
+após isto rode o comando para abrir o server
+
+php artisan serve
+
+
+   ```
+
+<h3> Usuários📌</h3>
+Caso não queira criar um usário use este:
+
+ ```bash
+login: admin@exemplo.com
+senha: 123456
+   ```
+
+
+--------------------
+
+<h3> Imagens funcionamento📌</h3>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-45-50.png" width="400px;" alt=""/>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-46-04.png" width="400px;" alt=""/>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-46-39.png" width="400px;" alt=""/>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-46-53.png" width="400px;" alt=""/>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-47-06.png" width="400px;" alt=""/>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-47-10.png" width="400px;" alt=""/>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-47-24.png" width="400px;" alt=""/>
+<img src="/LandingPageProject/public/imagens/Captura de tela de 2024-11-12 15-47-28.png" width="400px;" alt=""/>
+
+
+
+## Autor
+
+Feito por Matheus Torsoni👋🏽 Entre em contato!
+
+[![Twitter Badge](https://img.shields.io/badge/-@tcmatheus-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/tcmatheus_)](https://twitter.com/tcmatheus_) [![Linkedin Badge](https://img.shields.io/badge/-Matheus-Torsoni?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/matheus-torsoni-b33957156/)](https://www.linkedin.com/in/matheus-torsoni-b33957156/) 
+[![Outlook Badge](https://img.shields.io/badge/matheus_tcampos@hotmail.com-c14438?style=flat-square&logo=outlook&logoColor=white&link=mailto:matheus_tcampos@hotmail.com)](matheus_tcampos@hotmail.com)
